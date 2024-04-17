@@ -14,7 +14,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
             handleClose={handleClose}
         >
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                Tenés 6 intentos para descubrir la palabra cripto del día.
+                Tenés 6 intentos para descubrir la palabra 5seis del día.
                 Después de cada intento, el color de las letras va a cambiar
                 para que veas que tan cerca estás de la solución.
             </p>
@@ -23,29 +23,29 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                 <Cell
                     isRevealing={true}
                     isCompleted={true}
-                    value="S"
+                    value="5"
                     status="correct"
                 />
-                <Cell value="O" />
                 <Cell value="L" />
-                <Cell value="O" />
-                <Cell value="W" />
+                <Cell value="I" />
+                <Cell value="F" />
+                <Cell value="E" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
                 La letra S está en el lugar correcto.
             </p>
 
             <div className="flex justify-center mt-4 mb-1">
-                <Cell value="W" />
-                <Cell value="A" />
+                <Cell value="B" />
+                <Cell value="R" />
                 <Cell
                     isRevealing={true}
                     isCompleted={true}
-                    value="L"
+                    value="A"
                     status="present"
                 />
-                <Cell value="M" />
-                <Cell value="I" />
+                <Cell value="N" />
+                <Cell value="D" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
                 La letra L está presente en la palabra pero en el lugar

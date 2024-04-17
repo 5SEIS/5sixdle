@@ -1,4 +1,7 @@
 export const VALID_GUESSES = [
+    "mapping", 
+    "metaverso", 
+    "interactivo",
     'zax',
     'qgp',
     'wuz',
