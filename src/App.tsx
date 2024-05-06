@@ -4,7 +4,6 @@ import { Keyboard } from './components/keyboard/Keyboard'
 import { InfoModal } from './components/modals/InfoModal'
 import { StatsModal } from './components/modals/StatsModal'
 import { SettingsModal } from './components/modals/SettingsModal'
-import { RankingModal } from './components/modals/RankingModal'
 
 import {
   WIN_MESSAGES,
@@ -43,7 +42,6 @@ import './App.css'
 import { AlertContainer } from './components/alerts/AlertContainer'
 import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
-import { updateScore } from './lib/firebaseActions'
 
 function App() {
   const prefersDarkMode = window.matchMedia(
@@ -56,7 +54,6 @@ function App() {
   const [isGameWon, setIsGameWon] = useState(false)
   const [isInfoModalOpen, setIsInfoModalOpen] = useState(false)
   const [isStatsModalOpen, setIsStatsModalOpen] = useState(false)
-  const [isRankingModalOpen, setIsRankingModalOpen] = useState(false)
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useState(false)
   const [currentRowClass, setCurrentRowClass] = useState('')
   const [isGameLost, setIsGameLost] = useState(false)
@@ -246,7 +243,6 @@ function App() {
       setCurrentGuess('')
 
       if (winningWord) {
-        updateScore(calculateScore(guesses.length + 1))
         setStats(addStatsForCompletedGame(stats, guesses.length))
         return setIsGameWon(true)
       }
@@ -254,7 +250,7 @@ function App() {
       if (guesses.length === MAX_CHALLENGES - 1) {
         setStats(addStatsForCompletedGame(stats, guesses.length + 1))
         setIsGameLost(true)
-        updateScore(0)
+
         showErrorAlert(CORRECT_WORD_MESSAGE(solution), {
           persist: true,
           delayMs: REVEAL_TIME_MS * MAX_WORD_LENGTH + 1,
@@ -268,7 +264,6 @@ function App() {
       <Navbar
         setIsInfoModalOpen={setIsInfoModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}
-        setIsRankingModalOpen={setIsRankingModalOpen}
         setIsSettingsModalOpen={setIsSettingsModalOpen}
       />
       <div className="items-center mb-4 text-xl font-bold text-center sm:hidden dark:text-white">
@@ -295,15 +290,6 @@ function App() {
           guesses={guesses}
           isRevealing={isRevealing}
         />
-        <a
-          href="https://proposals.criptdle.com"
-          rel="noreferrer"
-          target={'_blank'}
-        >
-          <p className="mt-6 text-center underline dark:text-white">
-            Proponé tu palabra para el Criptdle
-          </p>
-        </a>
         <InfoModal
           isOpen={isInfoModalOpen}
           handleClose={() => setIsInfoModalOpen(false)}
@@ -332,10 +318,6 @@ function App() {
           handleDarkMode={handleDarkMode}
           isHighContrastMode={isHighContrastMode}
           handleHighContrastMode={handleHighContrastMode}
-        />
-        <RankingModal
-          isOpen={isRankingModalOpen}
-          handleClose={() => setIsRankingModalOpen(false)}
         />
 
         <AlertContainer />

@@ -65,19 +65,6 @@ export const StatsModal = ({
                                 {WORDS_DESCRIPTION[solution.toLowerCase()]}*
                             </p>
                         </div>
-                        <div className="mt-6">
-                            <small className="mb-4 outline-none dark:text-white">
-                                * Para seguir aprendiendo de cripto sumate al{' '}
-                                <a
-                                    href="https://discord.com/invite/kHvSC9WHzC"
-                                    target="_blank"
-                                    className="underline"
-                                    rel="noreferrer"
-                                >
-                                    discord de Solow
-                                </a>
-                            </small>
-                        </div>
                     </div>
                 )}
                 <div>

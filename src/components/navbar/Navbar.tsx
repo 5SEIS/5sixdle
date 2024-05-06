@@ -2,35 +2,22 @@ import {
     ChartBarIcon,
     CogIcon,
     InformationCircleIcon,
-    StarIcon,
 } from '@heroicons/react/outline'
 import { GAME_TITLE } from '../../constants/strings'
-import Signout from '../icons/signout'
 
-import { UnstoppableCtx } from '../../context/UnstoppableContext'
-import { useContext } from 'react'
 
 type Props = {
     setIsInfoModalOpen: (value: boolean) => void
     setIsStatsModalOpen: (value: boolean) => void
-    setIsRankingModalOpen: (value: boolean) => void
     setIsSettingsModalOpen: (value: boolean) => void
 }
 
 export const Navbar = ({
     setIsInfoModalOpen,
     setIsStatsModalOpen,
-    setIsRankingModalOpen,
     setIsSettingsModalOpen,
 }: Props) => {
-    const unstoppableCtx = useContext(UnstoppableCtx)
 
-    const {
-        unstoppableSignIn,
-        unstoppableSignOut,
-        displayName,
-        authenticated,
-    } = unstoppableCtx
     return (
         <div className="navbar">
             <div className="px-5 navbar-content">

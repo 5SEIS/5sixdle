@@ -32,7 +32,7 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                 <Cell value="E" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                La letra S está en el lugar correcto.
+                El numero 5 está en el lugar correcto.
             </p>
 
             <div className="flex justify-center mt-4 mb-1">
@@ -48,31 +48,31 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                 <Cell value="D" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                La letra L está presente en la palabra pero en el lugar
+                La letra A está presente en la palabra pero en el lugar
                 incorrecto.
             </p>
 
             <div className="flex justify-center mt-4 mb-1">
-                <Cell value="E" />
-                <Cell value="T" />
-                <Cell value="H" />
+                <Cell value="A" />
+                <Cell value="R" />
+                <Cell value="I" />
                 <Cell
                     isRevealing={true}
                     isCompleted={true}
-                    value="U"
+                    value="A"
                     status="absent"
                 />
-                <Cell value="R" />
+                <Cell value="L" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                La letra U no está en ningún lugar de la palabra.
+                La letra A no está en ningún lugar de la palabra.
             </p>
 
             <p className="mt-6 text-xs italic text-gray-500 dark:text-gray-300">
-                Es una versión de código abierto del juego de adivinar palabras
+                Es un fork de Criptdle, versión de código abierto del juego de adivinar palabras
                 que todos conocemos y amamos -{' '}
                 <a
-                    href="https://github.com/cwackerfuss/react-wordle"
+                    href="https://github.com/alejozarate/criptdle"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold underline outline-0 outline-none"
