@@ -30,14 +30,15 @@ export const Key = ({
             'transition ease-in-out': isRevealing,
             'bg-slate-200 dark:bg-slate-600 hover:bg-slate-300 active:bg-slate-400':
                 !status,
-            'bg-slate-400 dark:bg-slate-800 text-white': status === 'absent',
-            'bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white':
+            'bg-slate-400 dark:bg-slate-800 text-white':
+                status === 'absent',
+            'bg-brand-500 hover:bg-purple-700 active:bg-purple-800 text-white':
                 status === 'correct' && isHighContrast,
-            'bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 text-white':
+            'bg-brand-400 hover:bg-red-600 active:bg-red-800 text-white':
                 status === 'present' && isHighContrast,
-            'bg-green-500 hover:bg-green-600 active:bg-green-700 text-white':
+            'bg-green-500 hover:bg-green-500 active:bg-green-600 text-white':
                 status === 'correct' && !isHighContrast,
-            'bg-yellow-500 hover:bg-yellow-600 active:bg-yellow-700 text-white':
+            'bg-brand-300 hover:bg-blue-600 active:bg-blue-800 text-white':
                 status === 'present' && !isHighContrast,
         }
     )

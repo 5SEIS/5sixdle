@@ -187,11 +187,6 @@ function App() {
     )
   }
 
-  const calculateScore = (guesses: number) => {
-    return MAX_POINTS + (MAX_POINTS / MAX_CHALLENGES) * (1 - guesses)
-    // 600 + (100 * (1 - guesses))
-  }
-
   const onEnter = () => {
     if (isGameWon || isGameLost) {
       return

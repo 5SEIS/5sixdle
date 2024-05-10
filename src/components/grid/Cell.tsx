@@ -28,16 +28,17 @@ export const Cell = ({
         {
             'bg-white dark:bg-slate-900 border-slate-200 dark:border-slate-600':
                 !status,
-            'border-black dark:border-slate-100': value && !status,
+            'border-black dark:border-slate-100':
+                value && !status,
             'absent shadowed bg-slate-400 dark:bg-slate-700 text-white border-slate-400 dark:border-slate-700':
                 status === 'absent',
-            'correct shadowed bg-orange-500 text-white border-orange-500':
+            'correct shadowed bg-brand-500 text-white border-purple-400':
                 status === 'correct' && isHighContrast,
-            'present shadowed bg-cyan-500 text-white border-cyan-500':
+            'present shadowed bg-brand-400 text-white border-red-300':
                 status === 'present' && isHighContrast,
-            'correct shadowed bg-green-500 text-white border-green-500':
+            'correct shadowed bg-green-500 text-white border-brand-200':
                 status === 'correct' && !isHighContrast,
-            'present shadowed bg-yellow-500 text-white border-yellow-500':
+            'present shadowed bg-brand-300 text-white border-blue-400':
                 status === 'present' && !isHighContrast,
             'cell-fill-animation': isFilled,
             'cell-reveal': shouldReveal,
