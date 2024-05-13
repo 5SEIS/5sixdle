@@ -1,13 +1,9 @@
 {
-    "short_name": "Criptdle",
-    "name": "Criptdle",
-    "icons": [
-        {
-            "src": "solow.png",
-            "type": "image/png",
-            "sizes": "512x512"
-        }
-    ],
+    "short_name": "Brandle",
+    "name": "Brandle",
+    "icons":{
+        "48": "favicon.ico"
+    },
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#000000",

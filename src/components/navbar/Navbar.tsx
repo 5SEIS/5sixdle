@@ -4,6 +4,7 @@ import {
     InformationCircleIcon,
 } from '@heroicons/react/outline'
 import { GAME_TITLE } from '../../constants/strings'
+import logo from "../../5seis_logo.png"
 
 
 type Props = {
@@ -31,7 +32,8 @@ export const Navbar = ({
                         onClick={() => setIsStatsModalOpen(true)}
                     />
                 </div>
-                <p className="absolute items-center hidden text-xl font-bold sm:flex ml-center dark:text-white">
+                <p className="absolute items-center hidden text-xl font-bold sm:flex ml-center dark:text-white gap-2">
+                    <img src={logo} alt="5SEIS" style={{ aspectRatio: "460/169" }} width="50px" />
                     <span>{GAME_TITLE}</span>
                 </p>
                 <CogIcon

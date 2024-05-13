@@ -20,7 +20,6 @@ import {
   REVEAL_TIME_MS,
   GAME_LOST_INFO_DELAY,
   WELCOME_INFO_MODAL_MS,
-  MAX_POINTS,
 } from './constants/settings'
 import {
   isWordInWordList,
@@ -39,6 +38,7 @@ import {
 import { default as GraphemeSplitter } from 'grapheme-splitter'
 
 import './App.css'
+import logo from "./5seis_logo.png"
 import { AlertContainer } from './components/alerts/AlertContainer'
 import { useAlert } from './context/AlertContext'
 import { Navbar } from './components/navbar/Navbar'
@@ -262,7 +262,8 @@ function App() {
         setIsSettingsModalOpen={setIsSettingsModalOpen}
       />
       <div className="items-center mb-4 text-xl font-bold text-center sm:hidden dark:text-white">
-        <div className="flex justify-center">
+        <div className="flex justify-center items-center gap-2">
+          <img src={logo} alt="5SEIS" style={{ height: "18px" }} width="50px" />
           <span>{GAME_TITLE}</span>
         </div>
       </div>
