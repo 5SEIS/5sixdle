@@ -14,56 +14,59 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
             handleClose={handleClose}
         >
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                You have 6 attempts to discover the 5SEIS word of the day.
-                After each attempt, the color of the letters will change so you can see how close you are to the solution.
+                You have 6 tries to guess the 5SEIS word of the day.
+                After each guess, the color of the letters will change to show how close you are to the correct word.
             </p>
 
             <div className="flex justify-center mt-4 mb-1">
-                <Cell
-                    isRevealing={true}
-                    isCompleted={true}
-                    value="E"
-                    status="correct"
-                />
-                <Cell value="V" />
-                <Cell value="E" />
-                <Cell value="N" />
-                <Cell value="T" />
-            </div>
-            <p className="text-sm text-gray-500 dark:text-gray-300">
-                The letter E is in the correct place.
-            </p>
-
-            <div className="flex justify-center mt-4 mb-1">
-                <Cell value="B" />
-                <Cell value="R" />
                 <Cell
                     isRevealing={true}
                     isCompleted={true}
                     value="A"
-                    status="present"
+                    status="correct"
                 />
-                <Cell value="N" />
+                <Cell value="U" />
                 <Cell value="D" />
+                <Cell value="I" />
+                <Cell value="O" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                The letter A is present in the word but in the wrong place.
+                A is in the correct spot.
             </p>
 
             <div className="flex justify-center mt-4 mb-1">
+                <Cell value="I" />
+                <Cell value="D" />
                 <Cell value="A" />
-                <Cell value="V" />
-                <Cell value="A" />
-                <Cell value="N" />
                 <Cell
                     isRevealing={true}
                     isCompleted={true}
-                    value="T"
-                    status="absent"
+                    value="E"
+                    status="present"
                 />
+                <Cell value="S" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                The letter T is nowhere to be found in the word.
+                E is in the word but in the wrong spot.
+            </p>
+
+            <div className="flex justify-center mt-4 mb-1">
+                <Cell
+                    isRevealing={true}
+                    isCompleted={true}
+                    value="B"
+                    status="absent" />
+                <Cell value="I" />
+                <Cell value="D" />
+                <Cell value="E" />
+                <Cell value="O" />
+            </div>
+            <p className="text-sm text-gray-500 dark:text-gray-300">
+                B is not in the word in any spot.
+            </p>
+
+            <p className="text-sm text-gray-500 dark:text-gray-300">
+                The word changes at 00:00 GMT-3.
             </p>
 
             <p className="mt-6 text-xs italic text-gray-500 dark:text-gray-300">
