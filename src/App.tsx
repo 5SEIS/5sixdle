@@ -268,7 +268,7 @@ function App() {
         </div>
       </div>
       <p className="text-center dark:text-white navbar">
-        ¿Cuál es la palabra de hoy?
+        What is the word of today?
       </p>
       <div className="flex flex-col w-full px-1 pt-2 pb-8 mx-auto md:max-w-7xl sm:px-6 lg:px-8 grow">
         <div className="pb-6 grow">

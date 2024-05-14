@@ -9,30 +9,29 @@ type Props = {
 export const InfoModal = ({ isOpen, handleClose }: Props) => {
     return (
         <BaseModal
-            title="¿Cómo jugar?"
+            title="How to play?"
             isOpen={isOpen}
             handleClose={handleClose}
         >
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                Tenés 6 intentos para descubrir la palabra 5seis del día.
-                Después de cada intento, el color de las letras va a cambiar
-                para que veas que tan cerca estás de la solución.
+                You have 6 attempts to discover the 5SEIS word of the day.
+                After each attempt, the color of the letters will change so you can see how close you are to the solution.
             </p>
 
             <div className="flex justify-center mt-4 mb-1">
                 <Cell
                     isRevealing={true}
                     isCompleted={true}
-                    value="5"
+                    value="E"
                     status="correct"
                 />
-                <Cell value="L" />
-                <Cell value="I" />
-                <Cell value="F" />
+                <Cell value="V" />
                 <Cell value="E" />
+                <Cell value="N" />
+                <Cell value="T" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                El numero 5 está en el lugar correcto.
+                The letter E is in the correct place.
             </p>
 
             <div className="flex justify-center mt-4 mb-1">
@@ -48,36 +47,34 @@ export const InfoModal = ({ isOpen, handleClose }: Props) => {
                 <Cell value="D" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                La letra A está presente en la palabra pero en el lugar
-                incorrecto.
+                The letter A is present in the word but in the wrong place.
             </p>
 
             <div className="flex justify-center mt-4 mb-1">
                 <Cell value="A" />
-                <Cell value="R" />
-                <Cell value="I" />
+                <Cell value="V" />
+                <Cell value="A" />
+                <Cell value="N" />
                 <Cell
                     isRevealing={true}
                     isCompleted={true}
-                    value="A"
+                    value="T"
                     status="absent"
                 />
-                <Cell value="L" />
             </div>
             <p className="text-sm text-gray-500 dark:text-gray-300">
-                La letra A no está en ningún lugar de la palabra.
+                The letter T is nowhere to be found in the word.
             </p>
 
             <p className="mt-6 text-xs italic text-gray-500 dark:text-gray-300">
-                Es un fork de Criptdle, versión de código abierto del juego de adivinar palabras
-                que todos conocemos y amamos -{' '}
-                <a
-                    href="https://github.com/alejozarate/criptdle"
+                This is a fork of Criptdle, an open source version of the word guessing game we all know and love
+                - <a
+                    href="https://github.com/5SEIS/5sixdle"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-bold underline outline-0 outline-none"
                 >
-                    mirá el código acá
+                    check the code here!
                 </a>{' '}
             </p>
         </BaseModal>

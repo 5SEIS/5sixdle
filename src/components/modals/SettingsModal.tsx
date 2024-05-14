@@ -28,24 +28,24 @@ export const SettingsModal = ({
 }: Props) => {
     return (
         <BaseModal
-            title="Configuración"
+            title="Settings"
             isOpen={isOpen}
             handleClose={handleClose}
         >
             <div className="flex flex-col mt-2 divide-y">
                 <SettingsToggle
-                    settingName="Modo difícil"
+                    settingName="Hardmode"
                     flag={isHardMode}
                     handleFlag={handleHardMode}
                     description={HARD_MODE_DESCRIPTION}
                 />
                 <SettingsToggle
-                    settingName="Modo oscuro"
+                    settingName="Dark mode"
                     flag={isDarkMode}
                     handleFlag={handleDarkMode}
                 />
                 <SettingsToggle
-                    settingName="Modo de alto contraste"
+                    settingName="High contrast mode"
                     flag={isHighContrastMode}
                     handleFlag={handleHighContrastMode}
                     description={HIGH_CONTRAST_MODE_DESCRIPTION}
