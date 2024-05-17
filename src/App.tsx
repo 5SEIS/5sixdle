@@ -255,7 +255,7 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col">
       <Navbar
         setIsInfoModalOpen={setIsInfoModalOpen}
         setIsStatsModalOpen={setIsStatsModalOpen}
@@ -263,7 +263,7 @@ function App() {
       />
       <div className="items-center mb-4 text-xl font-bold text-center sm:hidden dark:text-white">
         <div className="flex justify-center items-center gap-2">
-          <img src={logo} alt="5SEIS" style={{ height: "18px" }} width="50px" />
+          <a href="https://5seis.com/"><img src={logo} alt="5SEIS" style={{ height: "18px" }} width="50px" /></a>
           <span>{GAME_TITLE}</span>
         </div>
       </div>

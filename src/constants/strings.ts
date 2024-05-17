@@ -1,3 +1,4 @@
+export const GAME_WEBTITLE = process.env.REACT_APP_GAME_TITLE!
 export const GAME_TITLE = process.env.REACT_APP_GAME_NAME!
 export const GAME_URL = process.env.REACT_APP_GAME_URL!
 

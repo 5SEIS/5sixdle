@@ -33,7 +33,7 @@ export const Navbar = ({
                     />
                 </div>
                 <p className="absolute items-center hidden text-xl font-bold sm:flex ml-center dark:text-white gap-2">
-                    <img src={logo} alt="5SEIS" style={{ aspectRatio: "460/169" }} width="50px" />
+                    <a href="https://5seis.com/"><img src={logo} alt="5SEIS" style={{ aspectRatio: "460/169" }} width="50px" /></a>
                     <span>{GAME_TITLE}</span>
                 </p>
                 <CogIcon

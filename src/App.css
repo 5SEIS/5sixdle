@@ -1,10 +1,17 @@
+html {
+    background-image: url(fondo_claro.jpg);
+    background-size: cover;
+}
+
 html.dark {
     /* background: radial-gradient( 
         54.06% 54.06% at 50% 50%, 
         rgba(100, 110, 142, 0.2) 0%, 
         rgba(0, 10, 22, 0.2) 93.02% ), 
-        #011937; */
-        background-image: url(./fondo_web.jpg);
-        background-size: cover;
-        background-color: #011937;
+        #011937; 
+    */
+    background-image: url(./fondo_oscuro.jpg);
+    background-size: cover;
+    background-color: #011937;
 }
+
